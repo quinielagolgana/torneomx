@@ -138,7 +138,7 @@ function clean(){
     spans = document.querySelectorAll(".quiniela span");
     for (var i=0; i<27;i++)
         spans[i].style.backgroundColor = "";
-    document.getElementById("costo").innerHTML = "Costo: $200";
+    document.getElementById("costo").innerHTML = "Costo: $0";
     document.getElementById("numquinielas").innerHTML = "0 Quiniela(s)";
 }
 
@@ -155,7 +155,7 @@ function updatedisplay(){
     else
         display.innerHTML += `<div>` +  res.join("\xa0\xa0") + "\xa0\xa0" + name + "*\xa0\xa0" + `</div>`;
 
-    document.getElementById("total").innerHTML = "Total: $" + quantity*10;
+    document.getElementById("total").innerHTML = "Total: $" + quantity*200;
 
     if (display.childElementCount > 0)
     display.lastElementChild.innerHTML += `<button id="undo" onclick="remove()"><ion-icon name="arrow-undo-outline"></ion-icon></button>`;
@@ -228,10 +228,10 @@ function getRandomInt(min, max) {
 function costoactual(){
     if (true){
         let aux2 = 1;
-        for (var i=0;i<200;i++){
+        for (var i=0;i<9;i++){
              aux2*= res[i].length;
         }
-        document.getElementById("costo").innerHTML = "Costo: $" + aux2*9;
+        document.getElementById("costo").innerHTML = "Costo: $" + aux2*200;
         document.getElementById("numquinielas").innerHTML = aux2 + " Quiniela(s)"
     }
 }
