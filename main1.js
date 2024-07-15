@@ -138,7 +138,7 @@ function clean(){
     spans = document.querySelectorAll(".quiniela span");
     for (var i=0; i<27;i++)
         spans[i].style.backgroundColor = "";
-    document.getElementById("costo").innerHTML = "Costo: $0";
+    document.getElementById("costo").innerHTML = "Costo: $200";
     document.getElementById("numquinielas").innerHTML = "0 Quiniela(s)";
 }
 
@@ -228,7 +228,7 @@ function getRandomInt(min, max) {
 function costoactual(){
     if (true){
         let aux2 = 1;
-        for (var i=0;i<10;i++){
+        for (var i=0;i<200;i++){
              aux2*= res[i].length;
         }
         document.getElementById("costo").innerHTML = "Costo: $" + aux2*9;
